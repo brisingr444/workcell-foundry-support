@@ -1,0 +1,62 @@
+name: Workcell access request
+description: Request a paid B2B Workcell Foundry quote and qualified access.
+title: "[Access] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Public, non-confidential request
+        This issue is public. **Never submit secrets, credentials, payment/card data, personal data, customer files, confidential information, or vulnerability details.** A request is not an order, invoice, entitlement, or acceptance.
+  - type: dropdown
+    id: plan
+    attributes:
+      label: Starting plan
+      options:
+        - Pilot — $199 USD/month
+        - Team — $499 USD/month
+        - Site — $999 USD/month
+        - Need guidance
+    validations:
+      required: true
+  - type: dropdown
+    id: territory
+    attributes:
+      label: Business territory
+      description: Canada and the United States are the initial qualified selling scope. Other territories enter qualification or the waitlist.
+      options:
+        - Canada
+        - United States
+        - Other — qualification or waitlist
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: Non-confidential intended use
+      description: Describe only the simulation workflow and desired outcome. Do not name a confidential customer, facility, robot program, or project.
+      placeholder: We want to plan and validate a simulated pick-and-place workcell...
+    validations:
+      required: true
+  - type: dropdown
+    id: organization_size
+    attributes:
+      label: Approximate organization size
+      options:
+        - 1–10
+        - 11–50
+        - 51–250
+        - 251+
+        - Prefer not to state publicly
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I am requesting access for a business or professional evaluation, not consumer use.
+          required: true
+        - label: I have not included secrets, credentials, payment data, personal data, customer files, confidential information, or vulnerability details.
+          required: true
+        - label: I understand this public request does not create an order, invoice, subscription, entitlement, or safety approval.
+          required: true
