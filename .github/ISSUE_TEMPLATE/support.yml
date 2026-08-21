@@ -1,0 +1,34 @@
+name: Product support
+description: Ask a general question or report a reproducible non-security issue.
+title: "[Support] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include secrets, credentials, customer files, private personal data, or exploit details. Security reports belong in private vulnerability reporting.
+  - type: input
+    id: release
+    attributes:
+      label: Release version and exact SHA
+      description: Use the release manifest or receipt; do not guess.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Operating system and environment
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction and expected result
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted logs
+      description: Remove secrets, tokens, personal data, and customer material.
+    validations:
+      required: false
