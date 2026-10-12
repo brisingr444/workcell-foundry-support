@@ -3,7 +3,7 @@
 ## Reporting
 
 Use the repository's private vulnerability reporting/security-advisory route
-when enabled. If it is unavailable, do not disclose exploit details publicly;
+at <https://github.com/brisingr444/workcell-foundry-support/security/advisories/new>. If it is unavailable, do not disclose exploit details publicly;
 preserve the report and obtain a verified private owner channel. Never include
 passwords, API keys, access tokens, customer files, or residential address
 information in an issue.

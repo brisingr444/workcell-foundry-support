@@ -15,3 +15,17 @@ Use this repository’s **Report a vulnerability** private reporting route. Neve
 Workcell Foundry is simulation-only. It does not control physical robots, PLCs, controllers, production lines, or safety functions. Simulation output is not safety certification, controller equivalence, or commissioning approval.
 
 Do not send synthetic or placeholder mailbox probes. Current product and release status is published at <https://workcell.space/>.
+
+## Canonical repository and downloads
+
+The maintained support and download repository is
+<https://github.com/brisingr444/workcell-foundry-support>.
+
+No public binary release is currently published here. Only separately approved
+releases will appear under [Releases](https://github.com/brisingr444/workcell-foundry-support/releases),
+with artifact checksums, release manifests, notices and applicable source offers.
+Private development candidates are not downloads or release approval.
+
+The repository was recovered from the previous public support repository. Its
+existing history is preserved; availability of the old account and redirects is
+not guaranteed. Product and commercial terms are unchanged by this migration.
