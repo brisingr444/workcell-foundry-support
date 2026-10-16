@@ -1,0 +1,58 @@
+{
+  "schema": "workcell.executable-tool/v1",
+  "id": "user_planned_bin_count",
+  "title": "Sum planned bin capacities",
+  "description": "Adds three supplied planned part counts. This is bookkeeping, not measured capacity, collision or simulation evidence.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "accepted": {
+        "type": "number"
+      },
+      "rejected": {
+        "type": "number"
+      },
+      "uncertain": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "accepted",
+      "rejected",
+      "uncertain"
+    ]
+  },
+  "program": [
+    {
+      "op": "sum",
+      "values": [
+        "$.accepted",
+        "$.rejected",
+        "$.uncertain"
+      ],
+      "to": "total"
+    }
+  ],
+  "tests": [
+    {
+      "input": {
+        "accepted": 20,
+        "rejected": 10,
+        "uncertain": 10
+      },
+      "expected": {
+        "total": 40
+      }
+    },
+    {
+      "input": {
+        "accepted": 0,
+        "rejected": 0,
+        "uncertain": 0
+      },
+      "expected": {
+        "total": 0
+      }
+    }
+  ]
+}
